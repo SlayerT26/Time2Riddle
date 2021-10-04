@@ -46,8 +46,27 @@ Welcome to Time2Riddle. An app that allows users to answer riddles. Dependent on
 • Search bar and sort button
 • High detail CSS
 
-# Wireframe
+# Schema
 
 https://www.figma.com/file/UlDKut0O2JCE8v4KJN2z0G/Untitled?node-id=0%3A1
 
 <a href="https://imgur.com/EbQ7CyC"><img src="https://i.imgur.com/EbQ7CyC.png" title="source: imgur.com" /></a>
+
+# Wireframe
+
+https://whimsical.com/project-4-2aoGuSpPkCgQXKrNzPdC23
+
+<a href="https://imgur.com/DNcUuxL"><img src="https://i.imgur.com/DNcUuxL.png" title="source: imgur.com" /></a>
+
+### Libraries and Dependencies
+
+
+|     Library      | Description                                |
+| :--------------: | :----------------------------------------- |
+|      React       | Render components, props, state, use ruby back end for data |
+|   React Router   | Navigate through website |
+| Ruby on Rails | Back-end server building |
+|     Rails     | Define models for back-end database |
+|  Netlify  | Fully functional front-end deployment |
+|  Heroku  | Fully functional back-end deployment |
+
