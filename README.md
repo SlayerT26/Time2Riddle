@@ -165,7 +165,7 @@ src
 
 # ERD Model
 
-<a href="https://imgur.com/QvUM26s"><img src="https://i.imgur.com/QvUM26s.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/ejWZeC2"><img src="https://i.imgur.com/ejWZeC2.png" title="source: imgur.com" /></a>
 
 # Code Showcase
 
