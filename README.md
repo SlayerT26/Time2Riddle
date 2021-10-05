@@ -98,7 +98,7 @@ https://whimsical.com/project-4-2aoGuSpPkCgQXKrNzPdC23
 
 https://whimsical.com/SL31p8GNDp8J1TvaamnXPx
 
-<a href="https://imgur.com/ouuE9WA"><img src="https://i.imgur.com/ouuE9WA.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/6EkPt5u"><img src="https://i.imgur.com/6EkPt5u.png" title="source: imgur.com" /></a>
 
 # Component Hierarchy
 
