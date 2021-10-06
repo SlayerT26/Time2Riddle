@@ -1,0 +1,62 @@
+.Home-nav {
+  background-color: #00AFB9;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1%;
+  padding-bottom: 2%;
+}
+
+.HomeParagraph {
+  background-image: url("https://i.imgur.com/OrDwDyM.png");
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 7% 86% 7%;
+  padding-top: 4%;
+}
+
+.Para1 {
+  background-color: #FFD166;
+  opacity: .9;
+  text-align: center;
+  padding-top: 5%;
+  font-family: 'Redressed', cursive;
+  font-size: 30px;
+}
+
+.div-login{
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 70%;
+}
+.HomeLogin {
+  margin-top: 0;
+  margin-bottom: 2%;
+  font-size: 30px;
+  transition: transform .7s ease-in-out
+}
+.HomeLogin:hover {
+  transform: rotate(720deg);
+}
+
+.Para2 {
+  font-size: 37px;
+  transition: all .2s ease-out;
+}
+.Para2:hover {
+  color: blue;
+  transform: scale(1.2);
+}
+
+#HomeToSignup {
+  text-decoration: none;
+  color: black;
+}
+
+#HomeLogin {
+  text-decoration: none;
+  font-family: 'Redressed', cursive;
+  color: black;
+}
