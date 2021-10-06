@@ -15,6 +15,7 @@
   display: grid;
   grid-template-columns: 7% 86% 7%;
   padding-top: 4%;
+  padding-bottom: 20%;
 }
 
 .Para1 {
@@ -34,7 +35,7 @@
 .HomeLogin {
   margin-top: 0;
   margin-bottom: 2%;
-  font-size: 30px;
+  font-size: 250%;
   transition: transform .7s ease-in-out
 }
 .HomeLogin:hover {

@@ -9,11 +9,13 @@ import CreateAccount from './screens/CreateAccount/CreateAccount'
 function App() {
   return (
     <>
-      <Homepage />
+      <Route path='/' exact>
+        <Homepage />
+      </Route>
       <Route path='/login' exact>
         <Login />
       </Route>
-      <Route path='/createaccount' exact>
+      <Route path="/createaccount" exact>
         <CreateAccount />
       </Route>
 

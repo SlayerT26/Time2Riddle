@@ -7,7 +7,7 @@ function Homepage() {
       <div className="HomeFlex1">
         <div className="Home-nav">
           <div>
-            <img src="https://i.imgur.com/3l4jp3Y.png" alt="ransom" width="700px" />
+            <img src="https://i.imgur.com/3l4jp3Y.png" alt="ransom" width="1000px" />
           </div>
           <div className="div-login">
             <Link to='/login' id="HomeLogin">
@@ -17,7 +17,6 @@ function Homepage() {
         </div>
         <div className="HomeParagraph">
           <p />
-
           <p className="Para1">Welcome to Time2Riddle. Do you enjoy being challenged?<br />
             Being creative? Or both?<br />
             Then this is your app.<br />
@@ -25,7 +24,7 @@ function Homepage() {
             isn’t enough, then create them. Create the most elaborate riddle for other user’s.<br />
             The app will also allow you to save your favorite riddle in your profile. <br />
             So you can come back, to try and solve it again or send to a friend.<br />
-            <Link to='/createaccount' id="HomeToSignup">
+            <Link to="/CreateAccount" id="HomeToSignup">
               <p className="Para2">Riddle me this and click here to start</p>
             </Link>
           </p>
