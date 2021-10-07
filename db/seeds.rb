@@ -7,4 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Riddle.destroy_all
 
+@admin = User.create!(username: 'Theo', email: 'chickadee@email.com', password: '123456')
+
+puts "#{User.count} users created"
+
+puts "#{Riddle.count} foods created"
