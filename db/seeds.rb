@@ -10,7 +10,8 @@ User.destroy_all
 Riddle.destroy_all
 
 @admin = User.create!(username: 'Theo', email: 'chickadee@email.com', password: '123456')
+@riddle1 = Riddle.create!(question: 'What belongs to you, but others can use?', hint: "Everyone calls you it", timer: 3, answer: "Your name")
 
 puts "#{User.count} users created"
 
-puts "#{Riddle.count} foods created"
+puts "#{Riddle.count} riddle created"

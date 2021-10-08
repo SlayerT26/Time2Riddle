@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :riddles
+  has_many :answers
   has_secure_password
   
 

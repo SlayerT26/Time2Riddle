@@ -3,17 +3,17 @@
 
 ## Unexpected Behavior
 
-Trying to enter in User Data but it is not allowing me too. Tried running a reset on the database and now the User is aborting because the is a unknow atribute in the user
+Won't create a riddle id or time created at. The riddle is created but not stored. 
 
 ## Expected Behavior
 
-Just create the User
+Create a riddle with an Id connected to the user
 
 ## Reproduce the Error
 
 
 ```md
-Rails db:reset and then abort
+Rails db:seed and then abort
 ```
 
 ## Documentation
@@ -21,11 +21,12 @@ Rails db:reset and then abort
 > Include the exact error message, and if helpful, any supplemental documentation, such as screen captures.
 
 ```md
-/Users/theochang/Desktop/Project4/Time2Riddle/db/seeds.rb:12:in `<main>'
+ActiveRecord::RecordInvalid: Validation failed: User must exist
+/Users/theochang/Desktop/Project4/Time2Riddle/db/seeds.rb:13:in `<main>'
 /Users/theochang/Desktop/Project4/Time2Riddle/bin/rails:5:in `<top (required)>'
 /Users/theochang/Desktop/Project4/Time2Riddle/bin/spring:10:in `block in <top (required)>'
 /Users/theochang/Desktop/Project4/Time2Riddle/bin/spring:7:in `<top (required)>'
-Tasks: TOP => db:reset => db:setup => db:seed
+Tasks: TOP => db:seed
 ```
 
 ## Attempted Resolution
@@ -33,5 +34,6 @@ Tasks: TOP => db:reset => db:setup => db:seed
 > If you haven't already, **Google your error message now**. See if those error messages return an answer. Include at least 2 resources you've tried to consult such as walk-throughs, stack overflow articles, and other discussion threads related to your error.
 
 ```md
+zoom video's
 
 ```
