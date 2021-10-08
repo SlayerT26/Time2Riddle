@@ -17,25 +17,6 @@ function CreateAccount(props) {
     }));
   };
 
-  // const { setUser } = props
-  // try {
-  //   if (password === passwordConfirmation) {
-
-  //     const user = await signUp(form)
-  //     setUser(user)
-  //     history.push('/')
-  //   } else { throw 'Sign Up Details Invalid' }
-  // } catch (error) {
-  //   console.error(error)
-  //   setForm({
-  //     username: '',
-  //     email: '',
-  //     password: '',
-  //     passwordConfirmation: '',
-  //     isError: true,
-  //     errorMsg: 'Sign Up Details Invalid',
-  //   })
-  // }
   return (
     <>
       <div className="Account-nav">
@@ -78,7 +59,8 @@ function CreateAccount(props) {
               <input
                 className="Account-input"
                 type="text"
-                name="Username"
+                name="username"
+                id="username"
                 value={formData.username}
                 onChange={handleChange}
               />
@@ -88,7 +70,8 @@ function CreateAccount(props) {
               <input
                 className="Account-input"
                 type="text"
-                name="Email"
+                name="email"
+                id="email"
                 value={formData.email}
                 onChange={handleChange}
               />
@@ -99,6 +82,7 @@ function CreateAccount(props) {
                 className="Account-input"
                 type="password"
                 name="password"
+                id="password"
                 value={formData.password}
                 onChange={handleChange}
               />

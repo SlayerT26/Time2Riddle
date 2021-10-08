@@ -1,19 +1,17 @@
 # PROJECT ISSUE TICKET
 
-
 ## Unexpected Behavior
 
-Won't create a riddle id or time created at. The riddle is created but not stored. 
+Cannot login or create account
 
 ## Expected Behavior
 
-Create a riddle with an Id connected to the user
+Login or create account
 
 ## Reproduce the Error
 
-
 ```md
-Rails db:seed and then abort
+
 ```
 
 ## Documentation
@@ -21,12 +19,7 @@ Rails db:seed and then abort
 > Include the exact error message, and if helpful, any supplemental documentation, such as screen captures.
 
 ```md
-ActiveRecord::RecordInvalid: Validation failed: User must exist
-/Users/theochang/Desktop/Project4/Time2Riddle/db/seeds.rb:13:in `<main>'
-/Users/theochang/Desktop/Project4/Time2Riddle/bin/rails:5:in `<top (required)>'
-/Users/theochang/Desktop/Project4/Time2Riddle/bin/spring:10:in `block in <top (required)>'
-/Users/theochang/Desktop/Project4/Time2Riddle/bin/spring:7:in `<top (required)>'
-Tasks: TOP => db:seed
+
 ```
 
 ## Attempted Resolution
@@ -35,5 +28,4 @@ Tasks: TOP => db:seed
 
 ```md
 zoom video's
-
 ```
