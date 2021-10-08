@@ -31,6 +31,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def verify
+    render json: @current_user.attributes.except("password_digest"), status: :ok
+  end
+
   def update
     if @user.update(user_params)
       render json: @user

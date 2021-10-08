@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_05_182138) do
+ActiveRecord::Schema.define(version: 2021_10_08_145045) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,10 @@ ActiveRecord::Schema.define(version: 2021_10_05_182138) do
     t.string "guess"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "riddle_id", null: false
+    t.bigint "user_id", null: false
+    t.index ["riddle_id"], name: "index_answers_on_riddle_id"
+    t.index ["user_id"], name: "index_answers_on_user_id"
   end
 
   create_table "riddles", force: :cascade do |t|
@@ -29,6 +33,8 @@ ActiveRecord::Schema.define(version: 2021_10_05_182138) do
     t.string "answer"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_riddles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,4 +45,7 @@ ActiveRecord::Schema.define(version: 2021_10_05_182138) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "answers", "riddles"
+  add_foreign_key "answers", "users"
+  add_foreign_key "riddles", "users"
 end

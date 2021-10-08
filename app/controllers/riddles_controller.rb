@@ -1,6 +1,6 @@
 class RiddlesController < ApplicationController
-  before_action :set_riddle, only: [:show, :update, :destroy]
-  before_action :authorize_request, only: [:create, :update, :destroy]
+  before_action :set_riddle, only: [:show, :update, :destroy, :add_answer_to_riddle]
+  before_action :authorize_request, only: [:user_riddles, :show, :create, :update, :destroy]
 
   def index
     @riddles = Riddle.all
@@ -8,12 +8,14 @@ class RiddlesController < ApplicationController
     render json: @riddles include: :answers
   end
 
-  # GET /foods/1
+  def user_riddles
+    @riddles = Riddle.where(user: @current_user)
+  end
+
   def show
     render json: @riddles, include: :answers
   end
 
-  # POST /foods
   def create
     @riddle = Riddle.new(riddle_params)
     @riddle.user = @current_user
@@ -25,7 +27,7 @@ class RiddlesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /foods/1
+
   def update
     if @riddle.update(riddle_params)
       render json: @riddle
@@ -34,26 +36,22 @@ class RiddlesController < ApplicationController
     end
   end
 
-  # DELETE /foods/1
   def destroy
     @riddle.destroy
   end
 
-  # adding flavor to food method goes here
   def add_answer_to_riddle
-    @riddle = Riddle.find(params[:id])
     @answer = Answer.find(params[:answer_id])
 
     render json: @riddle, include: :answer
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_riddle
       @riddle = Riddle.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def riddle_params
       params.require(:riddle).permit(:question, :answer)
     end
