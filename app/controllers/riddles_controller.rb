@@ -5,7 +5,7 @@ class RiddlesController < ApplicationController
   def index
     @riddles = Riddle.all
 
-    render json: @riddles include: :answers
+    render json: @riddles 
   end
 
   def user_riddles

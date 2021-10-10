@@ -19,20 +19,6 @@ function Login(props) {
 
   return (
     <>
-      <div className="Login-nav">
-        <div>
-          <img
-            src="https://i.imgur.com/3l4jp3Y.png"
-            alt="ransom"
-            width="900px"
-          />
-        </div>
-        <div className="div-login">
-          <Link to="/CreateAccount" id="CreateAccount">
-            <h2 className="CreateAccount">Create Account</h2>
-          </Link>
-        </div>
-      </div>
       <div className="Account-Login">
         <div className="Login-div">
           <div className="image-div">

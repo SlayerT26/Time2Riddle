@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all 
 
-    render json: @users
+    render json: @users include: :riddles
   end
 
   def show
@@ -41,6 +41,7 @@ class UsersController < ApplicationController
     else 
       render json: @user.errors, status: :unprocessable_entity
   end
+  end
 
   def destroy 
     @user = User.find(params[:id])
@@ -53,4 +54,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:username, :email, :password)
   end
+
 end

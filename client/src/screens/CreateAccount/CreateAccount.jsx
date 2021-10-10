@@ -19,7 +19,7 @@ function CreateAccount(props) {
 
   return (
     <>
-      <div className="Account-nav">
+      {/* <div className="Account-nav">
         <div>
           <img
             src="https://i.imgur.com/3l4jp3Y.png"
@@ -32,7 +32,7 @@ function CreateAccount(props) {
             <h2 className="AccountLogin">Login</h2>
           </Link>
         </div>
-      </div>
+      </div> */}
       <div className="Account-Create">
         <div className="Account-div">
           <div className="image-div">

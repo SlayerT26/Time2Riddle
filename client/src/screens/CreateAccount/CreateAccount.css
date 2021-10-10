@@ -1,5 +1,5 @@
 .Account-nav {
-  background-color: #EF476F;
+  background-color: #ef476f;
   background-size: cover;
   background-repeat: repeat;
   display: flex;
@@ -11,11 +11,11 @@
 }
 
 .AccountLogin {
-  font-family: 'Redressed', cursive;
+  font-family: "Redressed", cursive;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 250%;
-  transition: transform .7s ease-in-out
+  transition: transform 0.7s ease-in-out;
 }
 .AccountLogin:hover {
   transform: rotate(720deg);
@@ -34,9 +34,9 @@
 }
 
 .Account-div {
-  background: #073B4C;
+  background: #073b4c;
   width: max-content;
-  opacity: .9;
+  opacity: 0.9;
   width: 80%;
   margin-top: 5%;
   margin-bottom: 15%;
@@ -47,7 +47,7 @@
   background-size: cover;
 }
 
-.image-div{
+.image-div {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -55,7 +55,7 @@
   margin-top: 5%;
 }
 
-.Form-div{
+.Form-div {
   display: grid;
   grid-template-columns: 30% 70%;
   margin-top: 2%;
@@ -69,8 +69,8 @@
 }
 
 .Account-label {
-  background: #C4C4C4;
-  font-family: 'Redressed', cursive;
+  background: #c4c4c4;
+  font-family: "Redressed", cursive;
   padding: 2px;
   font-size: 250%;
   text-align: center;
@@ -83,7 +83,7 @@
   padding: 2px;
   text-size-adjust: 45px;
 }
-.Account-input[type="text"]{
+.Account-input[type="text"] {
   font-size: 30px;
 }
 
@@ -95,20 +95,20 @@
 }
 
 .button-form {
-  background: #C4C4C4;
+  background: #c4c4c4;
   border: none;
   width: 25%;
   font-size: 250%;
-  font-family: 'Redressed', cursive;
+  font-family: "Redressed", cursive;
 }
-
+/* 
 .button-form:hover{
   animation-name: pulse;
   animation-duration: .2s;
   animation-iteration-count: infinite;
-}
-@keyframes pulse {
+} */
+/* @keyframes pulse {
   from { transform: scale(1); }
   50% { transform: scale(0.85); }
   to { transform: scale(1); }
-}
+} */

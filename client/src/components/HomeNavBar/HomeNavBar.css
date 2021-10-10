@@ -1,0 +1,45 @@
+.Account-nav {
+  background-color: #ef476f;
+  background-size: cover;
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1%;
+  padding-bottom: 2%;
+}
+
+.AccountLogin {
+  font-family: "Redressed", cursive;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 250%;
+  transition: transform 0.7s ease-in-out;
+}
+
+.AccountCreate {
+  font-family: "Redressed", cursive;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 250%;
+}
+
+.div-HomeNavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 70%;
+}
+
+#AccountLogin {
+  text-decoration: none;
+}
+
+#AccountCreate {
+  text-decoration: none;
+}
+
+.AccountLogin:hover {
+  transform: rotate(720deg);
+}
