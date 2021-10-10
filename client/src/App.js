@@ -21,6 +21,7 @@ import {
   deleteRiddle,
   putRiddle,
 } from "./services/riddles";
+import DirectRiddle from "./screens/DirectRiddle/DirectRiddle";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -70,8 +71,6 @@ function App() {
     history.push("/riddles");
   };
 
-  console.log(riddles);
-
   return (
     <>
       <Switch>
@@ -90,6 +89,9 @@ function App() {
           </Route>
           <Route path="/create" exact>
             <CreateRiddle handleRiddleCreate={handleRiddleCreate} />
+          </Route>
+          <Route path="/riddles/:id" exact>
+            <DirectRiddle />
           </Route>
         </Layout>
       </Switch>

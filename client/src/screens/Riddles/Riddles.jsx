@@ -7,7 +7,7 @@ function Riddles(props) {
     <>
       <div className="Riddle-div-background">
         {props.riddles.map((riddle) => (
-          <Link to="/DirectRiddle" id="RiddlesLink">
+          <Link to={`/riddles/${riddle.id}`} id="RiddlesLink">
             <article className="Riddle-Article">
               <div className="Riddle-Question">
                 <h1 className="RiddleQuestion">{riddle.question}</h1>
