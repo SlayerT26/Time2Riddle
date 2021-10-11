@@ -23,11 +23,13 @@ function CreateAccount(props) {
         <div className="Account-div">
           <div className="image-div">
             <img
+              className="AccountImage1"
               src="https://i.imgur.com/gIU1FCo.png"
               alt="create"
               width="35%"
             />
             <img
+              className="AccountImage2"
               src="https://i.imgur.com/bvy18f8.png"
               alt="account"
               width="35%"

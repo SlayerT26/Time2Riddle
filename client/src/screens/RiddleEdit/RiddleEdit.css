@@ -152,3 +152,48 @@
   color: white;
   background: black;
 }
+
+@media screen and (max-width: 1024px) {
+  .EditForm {
+    width: 100%;
+  }
+  .EditTextDiv {
+    width: 99%;
+  }
+  .EditTextArea {
+    font-size: 30px;
+  }
+  .EditTextAnswer {
+    width: 99%;
+  }
+  .EditAnswerInput {
+    font-size: 30px;
+    height: 55px;
+  }
+  .EditTextHint {
+    width: 99%;
+  }
+  .EditHintInput {
+    font-size: 30px;
+    height: 55px;
+  }
+  .EditExtraInputs {
+    width: 99%;
+    justify-content: space-around;
+  }
+  .EditExtraTimer {
+    width: 115%;
+    height: 55px;
+    font-size: 30px;
+  }
+  .EditExtraLevel {
+    width: 115%;
+    height: 55px;
+    font-size: 30px;
+  }
+  .EditSaveButton {
+    height: 55px;
+    font-size: 30px;
+    width: 180px;
+  }
+}

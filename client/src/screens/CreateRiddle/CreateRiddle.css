@@ -74,7 +74,6 @@
   display: grid;
   grid-template-columns: 50% 50%;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 3%;
   margin-top: 4%;
   width: 80%;
@@ -86,15 +85,18 @@
 }
 .CreateExtraTimer[type="integer"] {
   font-size: 110%;
+  text-align: center;
 }
 
 .CreateExtraLevel {
   margin-left: 18%;
   height: 160%;
   border: solid black 2px;
+  text-align: center;
 }
 .CreateExtraLevel[type="text"] {
   font-size: 110%;
+  align-items: center;
 }
 
 .CreateButton {
@@ -124,4 +126,63 @@
   background: white;
   width: 40%;
   font-size: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .CreateForm {
+    width: 100%;
+  }
+  .CreateTextArea {
+    width: 98%;
+  }
+  .CreateTextArea[type="text"] {
+    font-size: 30px;
+  }
+  .CreateTextAnswer {
+    width: 100%;
+  }
+  .CreateTextAnswerInput {
+    width: 98%;
+    height: 65px;
+  }
+  .CreateTextAnswerInput[type="text"] {
+    font-size: 30px;
+  }
+  .CreateTexHint {
+    width: 100%;
+  }
+  .CreateTextHintInput {
+    width: 98%;
+    height: 65px;
+  }
+  .CreateTextHintInput[type="text"] {
+    font-size: 30px;
+  }
+  .CreateExtraInputs {
+    width: 99%;
+  }
+  .CreateExtraTimer {
+    height: 60px;
+  }
+  .CreateExtraTimer[type="integer"] {
+    font-size: 30px;
+  }
+  .CreateExtraLevel {
+    height: 60px;
+  }
+  .CreateExtraLevel[type="text"] {
+    font-size: 30px;
+  }
+  .CreateButton {
+    width: 99%;
+  }
+  .UserNameInput {
+    height: 60px;
+    font-size: 30px;
+  }
+  .CreateButtonSubmit {
+    height: 60px;
+    font-size: 30px;
+  }
 }

@@ -101,14 +101,42 @@
   font-size: 250%;
   font-family: "Redressed", cursive;
 }
-/* 
-.button-form:hover{
-  animation-name: pulse;
-  animation-duration: .2s;
-  animation-iteration-count: infinite;
-} */
-/* @keyframes pulse {
-  from { transform: scale(1); }
-  50% { transform: scale(0.85); }
-  to { transform: scale(1); }
-} */
+
+@media screen and (max-width: 1024px) {
+  .Account-div {
+    width: 100%;
+  }
+  .image-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .AccountImage1 {
+    width: 50%;
+    margin-right: 30%;
+  }
+  .AccountImage2 {
+    width: 50%;
+    margin-left: 30%;
+  }
+  .Form-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .Account-label {
+    font-size: 60px;
+    width: 40%;
+    margin-left: 0;
+    margin-right: 5%;
+  }
+  .Account-input {
+    width: 80%;
+    height: 92%;
+    font-size: 60px;
+  }
+  .button-form {
+    font-size: 60px;
+  }
+}

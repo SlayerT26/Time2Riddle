@@ -23,6 +23,7 @@ function Login(props) {
         <div className="Login-div">
           <div className="image-div">
             <img
+              className="Login-Image"
               src="https://i.imgur.com/M2SnSj9.png"
               alt="create"
               width="35%"

@@ -88,3 +88,25 @@
   color: white;
   background: black;
 }
+
+@media screen and (max-width: 1024px) {
+  .ProfileQuestions {
+    font-size: 50px;
+  }
+  .ProfileExtraLevel {
+    font-size: 220%;
+  }
+  .ProfileExtraTimer {
+    font-size: 220%;
+  }
+  .ProfileExtraEdit {
+    font-size: 220%;
+  }
+  .ProfileDelete {
+    width: 25%;
+    text-align: center;
+    padding-left: 7%;
+    font-size: 200%;
+    height: 60px;
+  }
+}

@@ -6,7 +6,6 @@ function Homepage(props) {
     <>
       <div className="HomeFlex1">
         <div className="HomeParagraph">
-          <p />
           <p className="Para1">
             Welcome to Time2Riddle. Do you enjoy being challenged?
             <br />
@@ -27,7 +26,6 @@ function Homepage(props) {
               <p className="Para2">Riddle me this and click here to start</p>
             </Link>
           </p>
-          <p />
         </div>
       </div>
     </>

@@ -101,13 +101,35 @@
   font-family: "Redressed", cursive;
 }
 
-/* .Login-button-form:hover{
-  animation-name: pulse;
-  animation-duration: .2s;
-  animation-iteration-count: infinite;
+@media screen and (max-width: 1024px) {
+  .Login-div {
+    width: 100%;
+    height: 800px;
+  }
+  .Login-Image {
+    width: 60%;
+  }
+  .Login-div {
+    width: 100%;
+  }
+  .Login-Form-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .Login-label {
+    width: 70%;
+    margin-left: 0;
+    margin-right: 5%;
+    font-size: 70px;
+  }
+  .Login-input {
+    width: 150%;
+    height: 80px;
+    font-size: 60px;
+  }
+  .Login-button-form {
+    font-size: 70px;
+  }
 }
-@keyframes pulse {
-  from { transform: scale(1); }
-  50% { transform: scale(0.85); }
-  to { transform: scale(1); }
-} */

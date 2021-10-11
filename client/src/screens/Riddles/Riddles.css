@@ -42,3 +42,15 @@
 .Riddle-Article:hover {
   transform: scale(1.05);
 }
+
+@media screen and (max-width: 1024px) {
+  .Riddle-Article {
+    width: 100%;
+  }
+  .RiddleQuestion {
+    font-size: 250%;
+  }
+  .Riddle-h3 {
+    font-size: 170%;
+  }
+}

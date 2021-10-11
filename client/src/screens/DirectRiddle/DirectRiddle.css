@@ -89,3 +89,23 @@
   height: 20%;
   width: 90%;
 }
+
+@media screen and (max-width: 1024px) {
+  .DirectRiddleWhite {
+    width: 100%;
+    margin-bottom: 30%;
+    margin-top: 10%;
+  }
+  .AnswerInput {
+    height: 70px;
+  }
+  .AnswerInput[type="text"] {
+    font-size: 30px;
+  }
+  .TimeExtra {
+    font-size: 30px;
+  }
+  .HintExtra {
+    font-size: 30px;
+  }
+}
