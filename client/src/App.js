@@ -24,6 +24,7 @@ import {
   putRiddle,
 } from "./services/riddles";
 import DirectRiddle from "./screens/DirectRiddle/DirectRiddle";
+import { postAnswer } from "./services/answer";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -84,7 +85,11 @@ function App() {
     await deleteRiddle(id);
     setToggle((prev) => !prev);
   };
+  //////////////////////////////////////////////////
 
+  const handleCreateAnswer = async (id) => {
+    await postAnswer(id);
+  };
   return (
     <>
       <Switch>
@@ -109,10 +114,13 @@ function App() {
             />
           </Route>
           <Route path="/riddles/:id/edit" exact>
-            <RiddleEdit handleRiddleEdit={handleRiddleEdit} />
+            <RiddleEdit handleRiddleEdit={handleRiddleEdit} riddles={riddles} />
           </Route>
           <Route path="/riddles/:id" exact>
-            <DirectRiddle currentUser={currentUser} />
+            <DirectRiddle
+              currentUser={currentUser}
+              handleCreateAnswer={handleCreateAnswer}
+            />
           </Route>
           <Route path="/riddles" exact>
             <Riddles riddles={riddles} currentUser={currentUser} />

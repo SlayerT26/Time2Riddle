@@ -4,6 +4,8 @@ import { getOneRiddle } from "../../services/riddles";
 import "./RiddleEdit.css";
 
 function RiddleEdit(props) {
+  const { id } = useParams();
+
   const [formData, setFormData] = useState({
     question: "",
     answer: "",
@@ -11,8 +13,6 @@ function RiddleEdit(props) {
     timer: "",
     level: "",
   });
-
-  const { id } = useParams();
 
   useEffect(() => {
     const fetchRiddle = async () => {
@@ -38,72 +38,75 @@ function RiddleEdit(props) {
 
   return (
     <>
-      <div className="CreateDiv">
+      <div className="EditDiv">
         <form
-          className="CreateForm"
+          className="EditForm"
           onSubmit={(e) => {
             e.preventDefault();
             props.handleRiddleEdit(id, formData);
           }}
         >
-          <div className="CreateTextDiv">
+          <div className="EditTextDiv">
+            <label className="EditQuestionLabel">Edit Question</label>
             <textarea
-              className="CreateTextArea"
+              className="EditTextArea"
               type="text"
               name="question"
               id="question"
               value={formData.question}
               onChange={handleChange}
-              placeholder="Enter question"
               required
             />
           </div>
-          <div className="CreateTextAnswer">
+          <div className="EditTextAnswer">
+            <label className="EditAnswerLabel">Edit Answer</label>
             <input
-              className="CreateTextAnswerInput"
+              className="EditAnswerInput"
               type="text"
               name="answer"
               id="answer"
               value={formData.answer}
               onChange={handleChange}
-              placeholder="Type in Answer"
               required
             />
           </div>
-          <div className="CreateTextHint">
+          <div className="EditTextHint">
+            <label className="EditHintLabel">Edit Hint</label>
             <input
-              className="CreateTextHintInput"
+              className="EditHintInput"
               type="text"
               name="hint"
               id="hint"
               value={formData.hint}
               onChange={handleChange}
-              placeholder="(Optional: Hint)"
             />
           </div>
-          <div className="CreateExtraInputs">
-            <input
-              className="CreateExtraTimer"
-              placeholder="Timer: Minute increments"
-              name="timer"
-              id="timer"
-              onChange={handleChange}
-              type="integer"
-              required
-            />
-            <input
-              className="CreateExtraLevel"
-              placeholder="Level: 1-5"
-              name="level"
-              id="level"
-              onChange={handleChange}
-              type="text"
-              required
-            />
+          <div className="EditExtraInputs">
+            <div className="EditTimerDiv">
+              <label className="EditTimerLabel">Edit Timer</label>
+              <input
+                className="EditExtraTimer"
+                name="timer"
+                id="timer"
+                value={formData.timer}
+                onChange={handleChange}
+                type="integer"
+              />
+            </div>
+            <div className="EditLevelDiv">
+              <label className="EditLevelLabel">Edit Level</label>
+              <input
+                className="EditExtraLevel"
+                name="level"
+                id="level"
+                value={formData.level}
+                onChange={handleChange}
+                type="text"
+              />
+            </div>
           </div>
-          <div className="CreateButton">
-            <input></input>
-            <button className="CreateButtonSubmit">Submit</button>
+          <div className="EditButton">
+            <button className="EditSaveButton">Save</button>
           </div>
         </form>
       </div>

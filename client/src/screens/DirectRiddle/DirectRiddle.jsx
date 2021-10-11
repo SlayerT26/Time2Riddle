@@ -13,7 +13,6 @@ function DirectRiddle(props) {
   useEffect(() => {
     const fetchSingleRiddle = async () => {
       const riddleData = await getOneRiddle(id);
-      // console.log(riddleData);
       setRiddleQuestion(riddleData);
     };
     if (props.currentUser) {
@@ -27,16 +26,12 @@ function DirectRiddle(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleCreateAnswer();
+    // handleCreateAnswer();
     if (guess.toLowerCase() === riddleQuestion.answer.toLowerCase()) {
       alert("That is Correct! You're a Riddler!");
     } else {
       alert("Try try try again!");
     }
-  };
-
-  const handleCreateAnswer = async () => {
-    const newAnswer = await postAnswer(id, guess);
   };
 
   return (
@@ -67,7 +62,7 @@ function DirectRiddle(props) {
                 onClick={() => alert(riddleQuestion.hint || "No Hint")}
                 className="HintExtra"
               >
-                Hint?
+                Hint? Click Here?
               </h3>
             </div>
           </form>

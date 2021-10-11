@@ -37,4 +37,8 @@
   margin-bottom: 2%;
   padding-top: 2%;
   padding-bottom: 1%;
+  transition: all 0.3s ease-out;
+}
+.Riddle-Article:hover {
+  transform: scale(1.05);
 }

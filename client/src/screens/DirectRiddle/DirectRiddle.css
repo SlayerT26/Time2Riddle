@@ -73,6 +73,11 @@
   font-size: 30px;
   background: white;
   height: 67%;
+  transition: 0.3s;
+}
+.ButtonExtra:hover {
+  background: black;
+  color: white;
 }
 .HintExtra {
   text-align: center;

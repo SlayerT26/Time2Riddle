@@ -1,0 +1,90 @@
+.ProfileDiv {
+  background-image: url("https://i.imgur.com/OrDwDyM.png");
+}
+.ProfileFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.UserWelcome {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.WelcomeUser {
+  background: #ffffffe0;
+  padding: 1% 3%;
+  font-family: "Redressed", cursive;
+  font-size: 400%;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 5%;
+}
+#RiddleEditLink {
+  text-decoration: none;
+}
+
+.ProfileSetUp {
+  background: #ffffffe0;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  border: black solid 2px;
+
+  width: 1200px;
+  height: 100%;
+}
+.ProfileQuestionList {
+  width: 100%;
+  height: 250%;
+}
+.ProfileQuestions {
+  text-align: center;
+  margin-right: 4%;
+  margin-left: 4%;
+  margin-bottom: 4%;
+  font-family: "Redressed", cursive;
+  color: black;
+  font-size: 40px;
+}
+.ProfileExtras {
+  display: grid;
+  grid-template-columns: 33% 33% 34%;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProfileExtraLevel {
+  color: black;
+  font-family: "Redressed", cursive;
+  font-size: 150%;
+  text-align: center;
+}
+.ProfileExtraTimer {
+  color: black;
+  font-family: "Redressed", cursive;
+  font-size: 150%;
+  text-align: center;
+}
+.ProfileExtraEdit {
+  color: black;
+  font-family: "Redressed", cursive;
+  font-size: 150%;
+  text-align: center;
+}
+
+.ProfileDelete {
+  background: #ffffffe0;
+  border: black solid 2px;
+  margin-bottom: 5%;
+  width: 20%;
+  height: 50px;
+  font-family: "Redressed", cursive;
+  font-size: 150%;
+  transition: 0.3s;
+}
+.ProfileDelete:hover {
+  color: white;
+  background: black;
+}

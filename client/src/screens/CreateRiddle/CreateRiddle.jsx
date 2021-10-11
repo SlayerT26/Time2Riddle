@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./CreateRiddle.css";
 
 function CreateRiddle(props) {
+  const { currentUser } = props;
+
   const [formData, setFormData] = useState({
     question: "",
     answer: "",
     hint: "",
-    timer: 0,
+    timer: "",
     level: "",
-    // creator: "",
+    creator: "",
   });
 
   const handleChange = (e) => {
@@ -18,7 +20,6 @@ function CreateRiddle(props) {
       [name]: value,
     }));
   };
-  console.log(props);
 
   return (
     <>
@@ -71,6 +72,7 @@ function CreateRiddle(props) {
               placeholder="Timer: Minute increments"
               name="timer"
               id="timer"
+              value={formData.timer}
               onChange={handleChange}
               type="integer"
               required
@@ -80,12 +82,23 @@ function CreateRiddle(props) {
               placeholder="Level: 1-5"
               name="level"
               id="level"
+              value={formData.level}
               onChange={handleChange}
               type="text"
               required
             />
           </div>
           <div className="CreateButton">
+            <input
+              className="UserNameInput"
+              name="creator"
+              id="creator"
+              value={formData.creator}
+              onChange={handleChange}
+              type="text"
+              placeholder="Username"
+              required
+            />
             <button className="CreateButtonSubmit">Submit</button>
           </div>
         </form>

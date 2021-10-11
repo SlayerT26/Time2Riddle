@@ -29,6 +29,7 @@
 .CreateTextArea {
   width: 80%;
   height: 190px;
+  border: black solid 2px;
 }
 .CreateTextArea[type="text"] {
   font-size: 25px;
@@ -46,6 +47,7 @@
 .CreateTextAnswerInput {
   width: 80%;
   height: 45px;
+  border: solid black 2px;
 }
 .CreateTextAnswerInput[type="text"] {
   font-size: 25px;
@@ -62,6 +64,7 @@
 .CreateTextHintInput {
   width: 80%;
   height: 45px;
+  border: solid black 2px;
 }
 .CreateTextHintInput[type="text"] {
   font-size: 25px;
@@ -77,33 +80,48 @@
   width: 80%;
 }
 .CreateExtraTimer {
-  margin-right: 20%;
-  height: 200%;
+  margin-right: 18%;
+  height: 160%;
+  border: solid black 2px;
 }
 .CreateExtraTimer[type="integer"] {
   font-size: 110%;
 }
 
 .CreateExtraLevel {
-  margin-left: 20%;
-  height: 200%;
+  margin-left: 18%;
+  height: 160%;
+  border: solid black 2px;
 }
-.CreateExtraLevel[type="integer"] {
+.CreateExtraLevel[type="text"] {
   font-size: 110%;
 }
 
 .CreateButton {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 3%;
-  width: 100%;
+  margin-top: 1%;
+  width: 80%;
 }
 .CreateButtonSubmit {
   border: black solid 1px;
   background: white;
-  width: 25%;
+  width: 41%;
+  height: 50px;
+  font-size: 20px;
+  border: solid black 2px;
+  transition: 0.3s;
+}
+.CreateButtonSubmit:hover {
+  background: black;
+  color: white;
+}
+.UserNameInput {
   height: 45px;
+  border: solid black 2px;
+  background: white;
+  width: 40%;
   font-size: 20px;
 }
