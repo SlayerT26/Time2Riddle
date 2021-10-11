@@ -13,7 +13,7 @@ class RiddlesController < ApplicationController
   end
 
   def show
-    render json: @riddles, include: :answers
+    render json: @riddle, include: :answers
   end
 
   def create
@@ -53,6 +53,6 @@ class RiddlesController < ApplicationController
     end
 
     def riddle_params
-      params.require(:riddle).permit(:question, :answer)
+      params.require(:riddle).permit(:question, :answer, :hint, :timer, :level, :creator)
     end
 end

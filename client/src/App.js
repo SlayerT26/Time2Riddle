@@ -4,6 +4,8 @@ import Login from "./screens/Login/Login";
 import CreateAccount from "./screens/CreateAccount/CreateAccount";
 import Riddles from "./screens/Riddles/Riddles";
 import CreateRiddle from "./screens/CreateRiddle/CreateRiddle";
+import Profile from "./screens/Profile/Profile";
+import RiddleEdit from "./screens/RiddleEdit/RiddleEdit";
 
 import { Layout } from "./components";
 import { useState, useEffect } from "react";
@@ -26,6 +28,7 @@ import DirectRiddle from "./screens/DirectRiddle/DirectRiddle";
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [riddles, setRiddles] = useState([]);
+  const [toggle, setToggle] = useState(false);
   const history = useHistory();
 
   useEffect(() => {
@@ -63,7 +66,7 @@ function App() {
       setRiddles(riddleList);
     };
     fetchRiddles();
-  }, []);
+  }, [toggle]);
 
   const handleRiddleCreate = async (riddleData) => {
     const newRiddle = await postRiddle(riddleData);
@@ -71,27 +74,51 @@ function App() {
     history.push("/riddles");
   };
 
+  const handleRiddleEdit = async (id, riddleData) => {
+    await putRiddle(id, riddleData);
+    setToggle((prev) => !prev);
+    history.push("/profile");
+  };
+
+  const handleRiddleDelete = async (id) => {
+    await deleteRiddle(id);
+    setToggle((prev) => !prev);
+  };
+
   return (
     <>
       <Switch>
         <Layout currentUser={currentUser} handleLogout={handleLogout}>
-          <Route path="/" exact>
-            <Homepage />
-          </Route>
           <Route path="/login" exact>
             <Login handleLogin={handleLogin} />
           </Route>
           <Route path="/createaccount" exact>
             <CreateAccount handleRegister={handleRegister} />
           </Route>
-          <Route path="/riddles" exact>
-            <Riddles riddles={riddles} />
-          </Route>
           <Route path="/create" exact>
-            <CreateRiddle handleRiddleCreate={handleRiddleCreate} />
+            <CreateRiddle
+              handleRiddleCreate={handleRiddleCreate}
+              currentUser={currentUser}
+            />
+          </Route>
+          <Route path="/profile" exact>
+            <Profile
+              currentUser={currentUser}
+              riddles={riddles}
+              handleRiddleDelete={handleRiddleDelete}
+            />
+          </Route>
+          <Route path="/riddles/:id/edit" exact>
+            <RiddleEdit handleRiddleEdit={handleRiddleEdit} />
           </Route>
           <Route path="/riddles/:id" exact>
-            <DirectRiddle />
+            <DirectRiddle currentUser={currentUser} />
+          </Route>
+          <Route path="/riddles" exact>
+            <Riddles riddles={riddles} currentUser={currentUser} />
+          </Route>
+          <Route path="/" exact>
+            <Homepage />
           </Route>
         </Layout>
       </Switch>

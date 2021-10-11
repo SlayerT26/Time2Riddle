@@ -2,13 +2,13 @@ class UsersController < ApplicationController
   def index
     @users = User.all 
 
-    render json: @users include: :riddles
+    render json: @users 
   end
 
   def show
     @users = User.find(params[:id])
 
-    render json: @users
+    render json: @users, include: :riddles
   end
 
   def show

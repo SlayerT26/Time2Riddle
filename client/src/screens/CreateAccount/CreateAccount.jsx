@@ -19,20 +19,6 @@ function CreateAccount(props) {
 
   return (
     <>
-      {/* <div className="Account-nav">
-        <div>
-          <img
-            src="https://i.imgur.com/3l4jp3Y.png"
-            alt="ransom"
-            width="900px"
-          />
-        </div>
-        <div className="div-login">
-          <Link to="/login" id="AccountLogin">
-            <h2 className="AccountLogin">Login</h2>
-          </Link>
-        </div>
-      </div> */}
       <div className="Account-Create">
         <div className="Account-div">
           <div className="image-div">
@@ -88,7 +74,9 @@ function CreateAccount(props) {
               />
             </div>
             <div className="Form-button">
-              <button className="button-form">Create</button>
+              <button type="submit" className="button-form">
+                Create
+              </button>
             </div>
           </form>
         </div>

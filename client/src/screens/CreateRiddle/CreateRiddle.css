@@ -1,4 +1,109 @@
 .CreateDiv {
   background-image: url("https://i.imgur.com/OrDwDyM.png");
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.CreateForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffffe0;
+  margin-top: 5%;
+  width: 80%;
+  margin-bottom: 10%;
+  padding-bottom: 5%;
+}
+.CreateTextDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  width: 100%;
+}
+.CreateTextArea {
+  width: 80%;
+  height: 190px;
+}
+.CreateTextArea[type="text"] {
+  font-size: 25px;
+}
+
+.CreateTextAnswer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  width: 100%;
+}
+
+.CreateTextAnswerInput {
+  width: 80%;
+  height: 45px;
+}
+.CreateTextAnswerInput[type="text"] {
+  font-size: 25px;
+}
+
+.CreateTextHint {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  width: 100%;
+}
+.CreateTextHintInput {
+  width: 80%;
+  height: 45px;
+}
+.CreateTextHintInput[type="text"] {
+  font-size: 25px;
+}
+
+.CreateExtraInputs {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3%;
+  margin-top: 4%;
+  width: 80%;
+}
+.CreateExtraTimer {
+  margin-right: 20%;
+  height: 200%;
+}
+.CreateExtraTimer[type="integer"] {
+  font-size: 110%;
+}
+
+.CreateExtraLevel {
+  margin-left: 20%;
+  height: 200%;
+}
+.CreateExtraLevel[type="integer"] {
+  font-size: 110%;
+}
+
+.CreateButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+  width: 100%;
+}
+.CreateButtonSubmit {
+  border: black solid 1px;
+  background: white;
+  width: 25%;
+  height: 45px;
+  font-size: 20px;
 }

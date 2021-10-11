@@ -1,15 +1,32 @@
-import { useState } from "react";
-import "./CreateRiddle.css";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { getOneRiddle } from "../../services/riddles";
+import "./RiddleEdit.css";
 
-function CreateRiddle(props) {
+function RiddleEdit(props) {
   const [formData, setFormData] = useState({
     question: "",
     answer: "",
     hint: "",
-    timer: 0,
+    timer: "",
     level: "",
-    // creator: "",
   });
+
+  const { id } = useParams();
+
+  useEffect(() => {
+    const fetchRiddle = async () => {
+      const riddle = await getOneRiddle(id);
+      setFormData({
+        question: riddle.question,
+        answer: riddle.answer,
+        hint: riddle.hint,
+        timer: riddle.timer,
+        level: riddle.level,
+      });
+    };
+    fetchRiddle();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,7 +35,6 @@ function CreateRiddle(props) {
       [name]: value,
     }));
   };
-  console.log(props);
 
   return (
     <>
@@ -27,7 +43,7 @@ function CreateRiddle(props) {
           className="CreateForm"
           onSubmit={(e) => {
             e.preventDefault();
-            props.handleRiddleCreate(formData);
+            props.handleRiddleEdit(id, formData);
           }}
         >
           <div className="CreateTextDiv">
@@ -86,6 +102,7 @@ function CreateRiddle(props) {
             />
           </div>
           <div className="CreateButton">
+            <input></input>
             <button className="CreateButtonSubmit">Submit</button>
           </div>
         </form>
@@ -94,4 +111,4 @@ function CreateRiddle(props) {
   );
 }
 
-export default CreateRiddle;
+export default RiddleEdit;
