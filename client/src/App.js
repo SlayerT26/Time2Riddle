@@ -59,8 +59,6 @@ function App() {
     history.push("/");
   };
 
-  /////////////////////////////////////////////
-
   useEffect(() => {
     const fetchRiddles = async () => {
       const riddleList = await getAllRiddles();
@@ -85,7 +83,6 @@ function App() {
     await deleteRiddle(id);
     setToggle((prev) => !prev);
   };
-  //////////////////////////////////////////////////
 
   const handleCreateAnswer = async (id) => {
     await postAnswer(id);
