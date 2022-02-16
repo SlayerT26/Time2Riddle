@@ -168,6 +168,26 @@ src
 <a href="https://imgur.com/ejWZeC2"><img src="https://i.imgur.com/ejWZeC2.png" title="source: imgur.com" /></a>
 
 # Code Showcase
+```
+ def user_riddles
+    @riddles = Riddle.where(user: @current_user)
+  end
+
+  def show
+    render json: @riddle, include: :answers
+  end
+
+  def create
+    @riddle = Riddle.new(riddle_params)
+    @riddle.user = @current_user
+
+    if @riddle.save
+      render json: @riddle, status: :created
+    else
+      render json: @riddle.errors, status: :unprocessable_entity
+    end
+```
+
 
 # Code Issues & Resolutions
 
